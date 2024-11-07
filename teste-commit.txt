@@ -1,1 +1,0 @@
-teste inicial de commit via terminal linux
