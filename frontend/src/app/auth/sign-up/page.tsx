@@ -21,6 +21,8 @@ function SignUpPage() {
   async function handleSignUp(event: FormEvent) {
     event.preventDefault();
 
+    setLoading(true);
+
     AuthService.signUp(user)
       .then(() => {
         navigate('/auth/sign-in')
@@ -30,11 +32,9 @@ function SignUpPage() {
       })
       .finally(() => {
         setLoading(false)
-      })
-
-
-    setLoading(true);
+      });
   }
+
   return (
     <form onSubmit={handleSignUp}>
       <Stack

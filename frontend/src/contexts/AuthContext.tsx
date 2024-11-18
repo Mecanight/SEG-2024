@@ -19,12 +19,12 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
     useEffect(()=>{
         AuthService.getUser()
         .then(result => {
-            if (result){
+            if (result) {
                 setUser({
                     uid: result.id,
                     email: result.email || '',
                     name: result.user_metadata?.name
-                })
+                });
             }
         })
         .catch(error => {
