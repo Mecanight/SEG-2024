@@ -5,7 +5,7 @@ import SignUpPage from "./app/auth/sign-up/page"
 import HomePage from "./app/home/page"
 import { useAuth } from "./hooks/useAuth"
 import { ToastContainer } from "react-toastify"
-
+import SignTwoFactorPage from "./app/auth/two-factor/page"
 
 function App() {
 

@@ -52,7 +52,9 @@ function HomePage() {
   }
 
   const handleVerify = async () => {
-    setLoading(true)
+
+    setLoading(true);
+
     AuthService.mfa.verifyCode(factorId, verifiedCode)
       .then(result => {
         if (result.user && result.user.factors) {
@@ -64,10 +66,10 @@ function HomePage() {
         }
       })
       .catch(() => {
-        toast.error(String('Código inválido'));
+        toast.error('Código inválido!');
       })
       .finally(() => {
-        setLoading(false);
+        setLoading(false)
       })
   }
 
